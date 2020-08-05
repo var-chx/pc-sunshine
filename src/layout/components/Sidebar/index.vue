@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import { Scrollbar, Menu } from 'element-ui'
 import logo from './logo'
 import SidebarItem from './SidebarItem'
@@ -36,6 +37,7 @@ export default {
     props: { },
 
     computed: {
+        ...mapGetters(['sidebar']),
         routes () {
             return this.$router.options.routes
         },
@@ -45,31 +47,10 @@ export default {
         variables () {
             return variables
         },
+        isCollapse () {
+            return !this.sidebar.opened
+        },
     },
-
-    watch: { },
-
-    beforeCreate () {},
-
-    create () {},
-
-    beforeMount () {},
-
-    mounted () {},
-
-    beforeUpdate () {},
-
-    updated () {},
-
-    activated () {},
-
-    deactivated () {},
-
-    beforeDestroy () {},
-
-    destroyed () {},
-
-    methods: {},
 
 }
 </script>

@@ -22,8 +22,8 @@ export const constantRoutes = [
             {
                 path: 'home2',
                 name: 'home',
-                component: () => import('@/views/home/index.vue'),
-                meta: { title: 'home', icon: 'home' },
+                component: () => import('@/views/AboutPage/index.vue'),
+                meta: { title: 'home2', icon: 'home' },
             },
         ],
     },
